@@ -1,4 +1,6 @@
-FROM openjdk:17-jdk-alpine
+FROM openjdk:17-jdk-slim
 VOLUME /tmp
 COPY target/myapp.jar myapp.jar
+# Rodar a aplicação na porta 8080
+EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "/myapp.jar"]
