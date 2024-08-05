@@ -1,5 +1,7 @@
 # Usar uma imagem base do OpenJDK
-FROM openjdk:17-jdk-slim
+# FROM openjdk:17-jdk-slim
+# Usar uma imagem própria para a OrangePI (ARM32-V7)
+FROM arm32v7/eclipse-temurin:17-jammy
 
 # Definir o diretório de trabalho dentro do container
 WORKDIR /app
